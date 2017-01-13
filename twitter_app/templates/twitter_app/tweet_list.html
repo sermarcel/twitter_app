@@ -1,0 +1,30 @@
+
+{% extends 'twitter_app/base.html' %}
+
+{% block title %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+    <body>
+        <h1>Lista tweetów</h1>
+    
+  {% for tweet in object_list %}
+        <p>{{ tweet.content }}</p>
+        <p><img src ={{tweet.user.avatar}} width="5%" height="5%"><em><a href=/{{tweet.user}}>{{ tweet.user}}</a> @ {{ tweet.creation_date }}</em></p>
+        <hr>
+    {% endfor %}
+        <a href="/add_tweet">Dodaj tweeta</a>
+                 
+                    </tbody>
+                </table>
+
+
+        {% endblock %}
+{% block content_js %}
+  
+{% endblock %}
+
+    </body>
